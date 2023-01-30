@@ -76,7 +76,7 @@ public class BallPanel extends JPanel{
 
 
             noel.drawBall(g);
-//            noel.moveBall();
+            noel.moveBall();
 
 
         repaint();
