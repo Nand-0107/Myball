@@ -77,6 +77,7 @@ public class BallPanel extends JPanel{
 
             noel.drawBall(g);
             noel.moveBall();
+            noel.checkBoundry(this);
 
 
         repaint();

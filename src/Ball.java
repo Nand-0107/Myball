@@ -9,7 +9,7 @@ public class Ball{
     private int size;
     private int num;
     private Color color;
-    private J
+
 
     public Ball(){
 
@@ -50,8 +50,8 @@ public class Ball{
         y++;
     }
 
-    public void checkBoundry(){
-
+    public void checkBoundry(JPanel panel2){
+        
     }
 
 }
