@@ -15,9 +15,9 @@ public class Ball{
 
         x = (int)(Math.random()*680);
         y = (int)(Math.random()*480);
-        xSpeed = 5;
-        ySpeed = 5;
-        size = (int)(Math.random()*20); ;
+        xSpeed = (int)(Math.random()+1*3);
+        ySpeed = (int)(Math.random()+1*3);
+        size = (int)(Math.random()*70); ;
     }
 
     public void drawBall(Graphics bob){
@@ -51,7 +51,13 @@ public class Ball{
     }
 
     public void checkBoundry(JPanel panel2){
-        
+        if(x>=panel2.getWidth()-size||x<0){
+            xSpeed = xSpeed * -1;
+        }
+        if(y >= panel2.getHeight()-size||y<0){
+            ySpeed = ySpeed * -1;
+        }
+
     }
 
 }
