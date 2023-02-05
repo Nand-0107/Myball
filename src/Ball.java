@@ -12,17 +12,15 @@ public class Ball{
 
 
     public Ball(){
-
         x = (int)(Math.random()*680);
         y = (int)(Math.random()*480);
-        xSpeed = (int)(Math.random()+1*3);
-        ySpeed = (int)(Math.random()+1*3);
-        size = (int)(Math.random()*70); ;
+        xSpeed = (int)(Math.random()*20);
+        ySpeed =(int)(Math.random()*20);
+        size = (int)(Math.random()*70);
     }
 
     public void drawBall(Graphics bob){
         bob.fillOval(x,y,size, size);
-
 
     }
 
@@ -36,19 +34,19 @@ public class Ball{
 //
 //    }
 
-    public void moveRight(){
-        x++;
-    }
-    public void moveLeft(){
-        x--;
-    }
-
-    public void moveUp(){
-        y--;
-    }
-    public void moveDown(){
-        y++;
-    }
+//    public void moveRight(){
+//        x++;
+//    }
+//    public void moveLeft(){
+//        x--;
+//    }
+//
+//    public void moveUp(){
+//        y--;
+//    }
+//    public void moveDown(){
+//        y++;
+//    }
 
     public void checkBoundry(JPanel panel2){
         if(x>=panel2.getWidth()-size||x<0){
