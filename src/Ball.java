@@ -13,11 +13,11 @@ public class Ball{
 
     public Ball(){
 
-        x = (int)(Math.random()*680)+1;
-        y = (int)(Math.random()*480)+1;
-        xSpeed = (int)((Math.random()*10));
-        ySpeed = (int)((Math.random()*10));
-        size = (int)((Math.random()+1)*50);
+        x = (int)(Math.random()*600);
+        y = (int)(Math.random()*400);
+        xSpeed = (int)((Math.random()*10)+1);
+        ySpeed = (int)((Math.random()*10)+1);
+        size = (int)((Math.random()*50)+20);
         color = (new Color((int)((Math.random()*255)),(int)((Math.random()*255)),(int)((Math.random()*255))));
 
     }
