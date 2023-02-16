@@ -15,8 +15,8 @@ public class Ball{
 
         x = (int)(Math.random()*600);
         y = (int)(Math.random()*400);
-        xSpeed = (int)((Math.random()*10)+1);
-        ySpeed = (int)((Math.random()*10)+1);
+        xSpeed = (int)((Math.random()*2)+1);
+        ySpeed = (int)((Math.random()*2)+1);
         size = (int)((Math.random()*50)+20);
         color = (new Color((int)((Math.random()*255)),(int)((Math.random()*255)),(int)((Math.random()*255))));
 
@@ -55,11 +55,14 @@ public class Ball{
     }
 
     public void checkBoundry(JPanel panel2){
+
         if(x>=panel2.getWidth()-size||x<0){
-            xSpeed = xSpeed * -1;
+            int z =(int)((Math.random()*1)+.5);
+            xSpeed = xSpeed *-z;
         }
         if(y >= panel2.getHeight()-size||y<0){
-            ySpeed = ySpeed * -1;
+            int z =(int)((Math.random()*1)+.5);
+            ySpeed = ySpeed * -z;
         }
 
     }
