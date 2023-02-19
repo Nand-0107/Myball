@@ -13,11 +13,11 @@ public class Ball{
 
     public Ball(){
 
-        x = (int)(Math.random()*600);
-        y = (int)(Math.random()*400);
+        x = (int)((Math.random()*600)+1);
+        y = (int)((Math.random()*250)+1);
         xSpeed = (int)((Math.random()*2)+1);
         ySpeed = (int)((Math.random()*2)+1);
-        size = (int)((Math.random()*50)+20);
+        size = 40;
         color = (new Color((int)((Math.random()*255)),(int)((Math.random()*255)),(int)((Math.random()*255))));
 
     }
@@ -25,10 +25,16 @@ public class Ball{
     public void drawBall(Graphics bob){
         bob.setColor(color);
         bob.fillOval(x,y,size, size);
-
-
-
     }
+    public void drawBall1(Graphics bobb) {
+        bobb.setColor(color);
+        bobb.fillOval(x + 20, y , size, size);
+    }
+
+        public void drawBall2(Graphics boby) {
+            boby.setColor(color);
+            boby.fillOval(x - 700, y , size, size);
+        }
 
     public void moveBall(){
         x+= xSpeed;

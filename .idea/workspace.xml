@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ebffa1f-dcd1-46a9-a7f0-47c8342025d4" name="Changes" comment="finished gthe ball">
+    <list default="true" id="5ebffa1f-dcd1-46a9-a7f0-47c8342025d4" name="Changes" comment="got the bounces">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BallPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BallPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +27,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="fae90030-eccc-4e94-ad54-525fa19372e9" />
+        <option name="url" value="https://github.com/Nand-0107/Myball.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,6 +62,20 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MyBallProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -77,21 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675186047271</updated>
     </task>
-    <task id="LOCAL-00004" summary="i tried 2">
-      <created>1676481894959</created>
+    <task id="LOCAL-00004" summary="got the bounces">
+      <created>1675306938682</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1676481894959</updated>
+      <updated>1675306938682</updated>
     </task>
-    <task id="LOCAL-00005" summary="finished gthe ball">
-      <created>1676482207302</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1676482207302</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,7 +131,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="i tried" />
     <MESSAGE value="i tried 2" />
-    <MESSAGE value="finished gthe ball" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished gthe ball" />
+    <MESSAGE value="got the bounces" />
+    <option name="LAST_COMMIT_MESSAGE" value="got the bounces" />
   </component>
 </project>
