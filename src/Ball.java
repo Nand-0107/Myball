@@ -2,10 +2,10 @@ import java.awt.*;
 import javax.swing.*;
 public class Ball{
 
-    private int x;
-    private int y;
-    private int xSpeed;
-    private int ySpeed;
+    private double x;
+    private double y;
+    private double xSpeed;
+    private double ySpeed;
     private int size;
     private int num;
     private Color color;
@@ -13,28 +13,22 @@ public class Ball{
 
     public Ball(){
 
-        x = (int)((Math.random()*600)+1);
-        y = (int)((Math.random()*250)+1);
-        xSpeed = (int)((Math.random()*2)+1);
-        ySpeed = (int)((Math.random()*2)+1);
-        size = 40;
+        x = (int)(Math.random()*600);
+        y = (int)(Math.random()*400);
+        xSpeed = 8;
+        ySpeed = 8;
+        size = (int)((Math.random()*50)+20);
         color = (new Color((int)((Math.random()*255)),(int)((Math.random()*255)),(int)((Math.random()*255))));
 
     }
 
     public void drawBall(Graphics bob){
         bob.setColor(color);
-        bob.fillOval(x,y,size, size);
-    }
-    public void drawBall1(Graphics bobb) {
-        bobb.setColor(color);
-        bobb.fillOval(x + 20, y , size, size);
-    }
+        bob.fillOval(((int)x),((int)y),size, size);
 
-        public void drawBall2(Graphics boby) {
-            boby.setColor(color);
-            boby.fillOval(x - 700, y , size, size);
-        }
+
+
+    }
 
     public void moveBall(){
         x+= xSpeed;
@@ -47,28 +41,28 @@ public class Ball{
 //    }
 
     public void moveRight(){
-        x++;
+       x= x+xSpeed;
     }
     public void moveLeft(){
-        x--;
+        x=x-xSpeed;
     }
 
     public void moveUp(){
-        y--;
+        y= y-ySpeed;
     }
     public void moveDown(){
-        y++;
+        y= y+ySpeed;
     }
 
     public void checkBoundry(JPanel panel2){
 
-        if(x>=panel2.getWidth()-size||x<0){
-            int z =(int)((Math.random()*1)+.5);
-            xSpeed = xSpeed *-z;
+        if(x>=panel2.getWidth()-size || x<0){
+
+            xSpeed = ((xSpeed *-1));
         }
-        if(y >= panel2.getHeight()-size||y<0){
-            int z =(int)((Math.random()*1)+.5);
-            ySpeed = ySpeed * -z;
+        if(y >= panel2.getHeight()-size || y<0){
+
+            ySpeed = ((ySpeed *-1));
         }
 
     }

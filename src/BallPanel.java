@@ -1,31 +1,22 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.sql.SQLOutput;
+import java.util.*;
 import javax.swing.*;
 public class BallPanel extends JPanel{
-    int x = 100;
-    int y = 50;
-    int xSpeed = 100;
-    int ySpeed = 100;
 
-    Ball noel;
-    Ball zoel;
-    Ball coel;
+
+    Ball noel = new Ball();
+
 
     public BallPanel(){
-      noel = new Ball();
-      zoel = new Ball();
-      coel = new Ball();
-        setBackground(new Color(215,12,82));
-        setFocusable(true);
 
-        Ball[] zoom = new Ball[3];
-        zoom[0]=noel;
-        zoom[1]=zoel;
-        zoom[2]=coel;
+
+
+
+
+        setBackground(new Color(24,255,82));
+        setFocusable(true);
 
         addKeyListener(new KeyListener() {
             @Override
@@ -65,39 +56,18 @@ public class BallPanel extends JPanel{
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
 
-//        g.fillOval(x,y,20,20);
-//        x= x + xSpeed;
-//        y= y + ySpeed;
-//
-//        if(x >= getWidth()-20|| x <= 0){
-//            xSpeed=xSpeed*-1;
-//
-//        }
-//        if(y >= getHeight()-20|| y <= 0) {
-//            ySpeed=ySpeed*-1;
-//
-//        }
-        try{
-            Thread.sleep(1);
-        }
-        catch(Exception e){
-            System.out.println(e);
-        }
-
-
-
-
             noel.drawBall(g);
-            zoel.drawBall1(g);
-            coel.drawBall2(g);
-//            noel.moveBall();
-//            noel.checkBoundry(this);
 
+            noel.checkBoundry(this);
 
+            try{
+                Thread.sleep(20);
+            }
+            catch(Exception e){
+                System.out.println(e);
+            }
         repaint();
-
     }
-
 
 
 
