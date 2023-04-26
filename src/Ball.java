@@ -7,7 +7,7 @@ public class Ball{
     private double xSpeed;
     private double ySpeed;
     private int size;
-    private int num;
+
     private Color color;
 
 
@@ -15,8 +15,8 @@ public class Ball{
 
         x = (int)(Math.random()*600);
         y = (int)(Math.random()*400);
-        xSpeed = 8;
-        ySpeed = 8;
+        xSpeed = ((Math.random()*.5)+.2);
+        ySpeed = ((Math.random()*.5)+.2);
         size = (int)((Math.random()*50)+20);
         color = (new Color((int)((Math.random()*255)),(int)((Math.random()*255)),(int)((Math.random()*255))));
 
@@ -24,10 +24,20 @@ public class Ball{
 
     public void drawBall(Graphics bob){
         bob.setColor(color);
-        bob.fillOval(((int)x),((int)y),size, size);
+        bob.fillOval(((int)(x)),((int)(y)),size, size);
 
 
 
+    }
+
+    public double getXPos(){
+        return x;
+    }
+    public double getYPos(){
+        return y;
+    }
+    public int siz(){
+        return size;
     }
 
     public void moveBall(){
@@ -35,37 +45,34 @@ public class Ball{
         y+= ySpeed;
     }
 
-//    public void bounceBall(){
-//
-//
-//    }
+
 
     public void moveRight(){
-       x= x+xSpeed;
+        x++;
     }
     public void moveLeft(){
-        x=x-xSpeed;
+        x--;
     }
 
     public void moveUp(){
-        y= y-ySpeed;
+        y--;
     }
     public void moveDown(){
-        y= y+ySpeed;
+        y++;
     }
 
     public void checkBoundry(JPanel panel2){
 
-        if(x>=panel2.getWidth()-size || x<0){
+        if(x>=panel2.getWidth()-size||x<0){
 
-            xSpeed = ((xSpeed *-1));
+            xSpeed = xSpeed *-1;
         }
-        if(y >= panel2.getHeight()-size || y<0){
+        if(y >= panel2.getHeight()-size||y<0){
 
-            ySpeed = ((ySpeed *-1));
+
+            ySpeed = ySpeed * -1;
         }
 
     }
 
 }
-
